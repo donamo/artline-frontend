@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ARTLINE">
+  <rect width="64" height="64" rx="14" fill="#121212"/>
+  <path d="M18 48 31.5 14h9L54 48h-9.2l-2.4-6.6H29.2L26.8 48H18Zm13.8-14h8l-4-11-4 11Z" fill="#ffd100"/>
+  <path d="M10 52h44v5H10z" fill="#b51f1f"/>
+  <path d="M23 25h20" stroke="#f5f1e8" stroke-width="5" stroke-linecap="round"/>
+</svg>
