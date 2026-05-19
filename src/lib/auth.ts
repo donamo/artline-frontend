@@ -2,10 +2,16 @@ import { z } from "zod";
 import { API_BASE_URL } from "./config";
 import type { CurrentUser } from "../types";
 
+const nullStringSchema = z.union([
+  z.string(),
+  z.object({ String: z.string(), Valid: z.boolean() }).transform((v) => (v.Valid ? v.String : null)),
+  z.null(),
+]);
+
 const userSchema = z.object({
   id: z.string(),
   email: z.string(),
-  displayName: z.string().nullable().optional(),
+  displayName: nullStringSchema.optional(),
 });
 
 export async function fetchCurrentUser(): Promise<CurrentUser | null> {
