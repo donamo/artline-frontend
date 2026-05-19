@@ -29,5 +29,8 @@ npm-debug.log*
 # GraphQL codegen output (generated, not committed)
 src/gql/
 
+# Tool-specific
+.serena/
+
 # Docker runtime artefacts
 env-config.js
