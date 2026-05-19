@@ -14,6 +14,7 @@ FROM nginx:stable-alpine AS production
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY default.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/dist/favicon.ico /usr/share/nginx/html/favicon.ico
 COPY --from=builder /app/dist/favicon.svg /usr/share/nginx/html/favicon.svg
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
